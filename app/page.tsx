@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#fff3f7] text-[#2b1b22]">
@@ -25,33 +27,48 @@ export default function Home() {
           </nav>
         </header>
         <main className="mx-auto flex w-full max-w-6xl flex-col items-start px-6 pb-24 pt-16">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#8a5263]">
-              Portfolio
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-              Hi! I&apos;m Haruka Mibuchi
-              <span className="mt-2 block text-2xl font-medium text-[#8a5263] sm:text-3xl">
-                nice to meet u
-              </span>
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-[#4a2d38] sm:text-lg">
-              A pink, minimal home for my work, thoughts, and collaborations.
-              Simple layouts, soft gradients, and crisp details.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                className="rounded-full bg-[#2b1b22] px-6 py-3 text-sm font-semibold text-[#fff3f7] transition-colors hover:bg-[#47232f]"
-                href="#work"
-              >
-                See work
-              </a>
-              <a
-                className="rounded-full border border-[#2b1b22]/20 bg-white/40 px-6 py-3 text-sm font-semibold text-[#2b1b22] backdrop-blur transition-colors hover:border-[#2b1b22]/40"
-                href="#contact"
-              >
-                Contact
-              </a>
+          <div className="grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#8a5263]">
+                Portfolio
+              </p>
+              <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+                Hi! I&apos;m Haruka Mibuchi
+                <span className="mt-2 block text-2xl font-medium text-[#8a5263] sm:text-3xl">
+                  nice to meet u
+                </span>
+              </h1>
+              <p className="mt-6 text-base leading-relaxed text-[#4a2d38] sm:text-lg">
+                A pink, minimal home for my work, thoughts, and collaborations.
+                Simple layouts, soft gradients, and crisp details.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  className="rounded-full bg-[#2b1b22] px-6 py-3 text-sm font-semibold text-[#fff3f7] transition-colors hover:bg-[#47232f]"
+                  href="#work"
+                >
+                  See work
+                </a>
+                <a
+                  className="rounded-full border border-[#2b1b22]/20 bg-white/40 px-6 py-3 text-sm font-semibold text-[#2b1b22] backdrop-blur transition-colors hover:border-[#2b1b22]/40"
+                  href="#contact"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+            <div className="relative mx-auto w-full max-w-sm">
+              <div className="absolute -right-6 -top-6 h-full w-full rounded-[32px] border border-white/70 bg-white/30" />
+              <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white/80 shadow-[0_30px_80px_-50px_rgba(80,20,40,0.6)]">
+                <Image
+                  src="/haruka.jpg"
+                  alt="Haruka Mibuchi"
+                  width={720}
+                  height={960}
+                  className="h-auto w-full object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
           <section
