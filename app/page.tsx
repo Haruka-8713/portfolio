@@ -1,65 +1,85 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="min-h-screen bg-[#fff3f7] text-[#2b1b22]">
+      <div className="pointer-events-none fixed inset-0 overflow-hidden">
+        <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#ffc1d6]/60 blur-3xl" />
+        <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-[#ff8fb8]/40 blur-3xl" />
+        <div className="absolute left-1/3 bottom-0 h-80 w-80 rounded-full bg-[#ffd6e6]/50 blur-3xl" />
+      </div>
+      <div className="relative z-10">
+        <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+          <div className="text-xl font-semibold tracking-tight">HM</div>
+          <nav className="flex items-center gap-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#8a5263]">
+            <a className="transition-colors hover:text-[#2b1b22]" href="#">
+              Home
+            </a>
+            <a className="transition-colors hover:text-[#2b1b22]" href="#">
+              Work
+            </a>
+            <a className="transition-colors hover:text-[#2b1b22]" href="#">
+              Blog
+            </a>
+            <a className="transition-colors hover:text-[#2b1b22]" href="#">
+              Contact
+            </a>
+          </nav>
+        </header>
+        <main className="mx-auto flex w-full max-w-6xl flex-col items-start px-6 pb-24 pt-16">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#8a5263]">
+              Portfolio
+            </p>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+              Hi! I&apos;m Haruka Mibuchi
+              <span className="mt-2 block text-2xl font-medium text-[#8a5263] sm:text-3xl">
+                nice to meet u
+              </span>
+            </h1>
+            <p className="mt-6 text-base leading-relaxed text-[#4a2d38] sm:text-lg">
+              A pink, minimal home for my work, thoughts, and collaborations.
+              Simple layouts, soft gradients, and crisp details.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                className="rounded-full bg-[#2b1b22] px-6 py-3 text-sm font-semibold text-[#fff3f7] transition-colors hover:bg-[#47232f]"
+                href="#work"
+              >
+                See work
+              </a>
+              <a
+                className="rounded-full border border-[#2b1b22]/20 bg-white/40 px-6 py-3 text-sm font-semibold text-[#2b1b22] backdrop-blur transition-colors hover:border-[#2b1b22]/40"
+                href="#contact"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+          <section
+            className="mt-14 grid w-full gap-6 sm:grid-cols-3"
+            id="work"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            {[
+              "Visual design",
+              "Web experiences",
+              "Brand identity",
+            ].map((item) => (
+              <div
+                className="rounded-2xl border border-white/60 bg-white/70 p-6 shadow-[0_20px_60px_-40px_rgba(80,20,40,0.4)] backdrop-blur"
+                key={item}
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8a5263]">
+                  Focus
+                </p>
+                <h3 className="mt-3 text-lg font-semibold">{item}</h3>
+                <p className="mt-2 text-sm text-[#5f3a49]">
+                  Curated projects with soft gradients, bold type, and careful
+                  interaction details.
+                </p>
+              </div>
+            ))}
+          </section>
+        </main>
+      </div>
     </div>
   );
 }
